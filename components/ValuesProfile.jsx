@@ -141,11 +141,11 @@ export default function ValuesProfile() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#F5F0EA", padding: 0 }}>
+    <div style={{ minHeight: "100vh", background: "#D4CFC4", padding: 0 }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Jost', sans-serif; }
+        body { font-family: 'Jost', sans-serif; background: #D4CFC4; }
         .drag-card { cursor: grab; user-select: none; transition: transform 0.15s ease, box-shadow 0.15s ease; }
         .drag-card:active { cursor: grabbing; transform: scale(1.02); box-shadow: 0 14px 40px rgba(0,0,0,0.13); }
         .drag-card:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.09); }
@@ -154,25 +154,62 @@ export default function ValuesProfile() {
         .result-card { animation: fadeUp 0.5s ease forwards; opacity: 0; }
         @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
         .pattern-block { animation: fadeUp 0.4s ease forwards; opacity: 0; }
+        .back-link { color: #5A524A; text-decoration: none; font-size: 12px; letter-spacing: 1px; }
+        .back-link:hover { color: #2A2420; }
       `}</style>
 
       <Confetti active={showConfetti} />
 
       {/* Header */}
-      <div style={{ background: "#2A3B32", padding: "52px 24px 44px", textAlign: "center" }}>
+      <div style={{ background: "#D4CFC4", padding: "32px 24px 0", textAlign: "center" }}>
+        <div style={{ textAlign: "left", maxWidth: "600px", margin: "0 auto 24px" }}>
+          <a href="https://kintsu.odoo.com" className="back-link">← kintsu.odoo.com</a>
+        </div>
+      </div>
+      <div style={{ background: "#D4CFC4", padding: "40px 24px 60px", textAlign: "center", position: "relative", overflow: "hidden", minHeight: "200px" }}>
+        {/* Triangle brand motif — matches Odoo page grid pattern */}
+        <div style={{ position: "absolute", bottom: 0, right: 0, lineHeight: 0 }}>
+          <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Row 1 - top */}
+            <polygon points="80,0 120,0 80,40" fill="#1C1C1A"/>
+            <polygon points="120,0 160,0 160,40" fill="#6B6B6B"/>
+            <polygon points="120,0 160,40 120,40" fill="#D4CFC4"/>
+            <polygon points="80,0 120,40 80,40" fill="#9A9590"/>
+            {/* Row 2 */}
+            <polygon points="80,40 120,40 80,80" fill="#D4CFC4"/>
+            <polygon points="120,40 160,40 120,80" fill="#1C1C1A"/>
+            <polygon points="120,40 160,80 120,80" fill="#9A9590"/>
+            <polygon points="80,40 120,80 80,80" fill="#6B6B6B"/>
+            {/* Row 3 */}
+            <polygon points="80,80 120,80 80,120" fill="#6B6B6B"/>
+            <polygon points="120,80 160,80 120,120" fill="#D4CFC4"/>
+            <polygon points="120,80 160,120 120,120" fill="#1C1C1A"/>
+            <polygon points="80,80 120,120 80,120" fill="#D4CFC4"/>
+            {/* Row 4 - bottom */}
+            <polygon points="80,120 120,120 80,160" fill="#9A9590"/>
+            <polygon points="120,120 160,120 120,160" fill="#6B6B6B"/>
+            <polygon points="120,120 160,160 120,160" fill="#D4CFC4"/>
+            <polygon points="80,120 120,160 80,160" fill="#1C1C1A"/>
+            {/* Left column extension */}
+            <polygon points="40,80 80,80 40,120" fill="#9A9590"/>
+            <polygon points="40,80 80,120 40,120" fill="#1C1C1A"/>
+            <polygon points="40,120 80,120 40,160" fill="#D4CFC4"/>
+            <polygon points="40,120 80,160 40,160" fill="#6B6B6B"/>
+          </svg>
+        </div>
         <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "11px", letterSpacing: "3px", color: "#5B8A8A", textTransform: "uppercase", fontWeight: 500, marginBottom: "16px" }}>
           Kintsu
         </p>
-        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(30px, 6vw, 50px)", fontWeight: 400, color: "#EDE8E0", lineHeight: 1.2, marginBottom: "18px" }}>
+        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(30px, 6vw, 50px)", fontWeight: 400, color: "#2A2420", lineHeight: 1.2, marginBottom: "18px" }}>
           Your Values Profile
         </h1>
         <div style={{ width: "40px", height: "2px", background: "#5B8A8A", margin: "0 auto 20px" }} />
-        <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "15px", color: "#8BAF9A", maxWidth: "460px", margin: "0 auto", lineHeight: 1.7, fontWeight: 300 }}>
-          You already know what matters to you. This is a structured way to surface it.
+        <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "15px", color: "#5A524A", maxWidth: "460px", margin: "0 auto", lineHeight: 1.7, fontWeight: 300 }}>
+          You already know what matters to you.<BR>This is a structured way to surface it.</BR>
         </p>
       </div>
 
-      <div style={{ maxWidth: "600px", margin: "0 auto", padding: "44px 20px 80px" }}>
+      <div style={{ maxWidth: "600px", margin: "0 auto", padding: "44px 20px 80px" , background: "#D4CFC4" }}>
 
         {!submitted ? (
           <>
@@ -212,8 +249,7 @@ export default function ValuesProfile() {
                   </div>
                   <div style={{ flex: 1 }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "5px" }}>
-                      <span style={{ fontSize: "15px" }}>{item.emoji}</span>
-                      <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "17px", fontWeight: 600, color: "#2A3B32" }}>
+                      <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "17px", fontWeight: 600, color: "#2A2420" }}>
                         {item.name}
                       </h3>
                     </div>
@@ -221,7 +257,10 @@ export default function ValuesProfile() {
                       {item.descriptor}
                     </p>
                   </div>
-                  <div style={{ color: "#C8BEB4", fontSize: "16px", flexShrink: 0, letterSpacing: "-1px" }}>⠿</div>
+                  {/* Triangle drag handle */}
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0, opacity: 0.35 }}>
+                    <polygon points="8,0 16,16 0,16" fill="#2A2420"/>
+                  </svg>
                 </div>
               ))}
             </div>
@@ -243,18 +282,18 @@ export default function ValuesProfile() {
         ) : (
           <>
             <div className="pattern-block" style={{
-              background: "#2A3B32", borderRadius: "12px",
+              background: "#1C1C1A", borderRadius: "12px",
               padding: "32px 28px", marginBottom: "32px",
               borderLeft: `4px solid ${items[0].color}`,
             }}>
-              <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "10px", letterSpacing: "3px", color: "#7AA890", textTransform: "uppercase", marginBottom: "10px", fontWeight: 500 }}>
+              <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "10px", letterSpacing: "3px", color: "#5B8A8A", textTransform: "uppercase", marginBottom: "10px", fontWeight: 500 }}>
                 Your Profile
               </p>
-              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(20px, 4vw, 28px)", fontWeight: 400, color: "#EDE8E0", marginBottom: "16px", lineHeight: 1.3 }}>
+              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(20px, 4vw, 28px)", fontWeight: 400, color: "#F0EBE3", marginBottom: "16px", lineHeight: 1.3 }}>
                 You lead with{" "}
                 <em style={{ color: items[0].color }}>{items[0].name}</em>
               </h2>
-              <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "14px", color: "#A8C4B4", lineHeight: 1.75, fontWeight: 300 }}>
+              <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "14px", color: "#B0A898", lineHeight: 1.75, fontWeight: 300 }}>
                 {getPattern(items)}
               </p>
             </div>
@@ -281,8 +320,7 @@ export default function ValuesProfile() {
                     }}>
                       {index + 1}
                     </div>
-                    <span style={{ fontSize: "14px" }}>{item.emoji}</span>
-                    <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "17px", fontWeight: 600, color: "#2A3B32" }}>
+                    <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "17px", fontWeight: 600, color: "#2A2420" }}>
                       {item.name}
                     </h3>
                     <span style={{
@@ -369,9 +407,9 @@ export default function ValuesProfile() {
           </>
         )}
 
-        <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "11px", color: "#B0A898", textAlign: "center", marginTop: "40px", lineHeight: 1.7, fontWeight: 300 }}>
+        <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "11px", color: "#8A8278", textAlign: "center", marginTop: "40px", lineHeight: 1.7, fontWeight: 300 }}>
           This tool is not a substitute for professional career, psychological, or financial advice.<br />
-          © 2026 Resonant Systems Studio
+          © 2026 Kintsu
         </p>
       </div>
     </div>
