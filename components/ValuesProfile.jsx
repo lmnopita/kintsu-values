@@ -362,7 +362,7 @@ export default function ValuesProfile() {
                 When you're ready to adjust those weights yourself — dialing each dimension up or down based on what you've learned — that's what the Kintsu Pro Upgrade is for.
               </p>
               <a
-                href="https://gumroad.com"
+                href="https://resonantstudio.gumroad.com/l/JobFitTool"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -379,7 +379,7 @@ export default function ValuesProfile() {
               </a>
               <br />
               <a
-                href="https://gumroad.com"
+                href="https://resonantstudio.gumroad.com/l/JobFitTool"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
