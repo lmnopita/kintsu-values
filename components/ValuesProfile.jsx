@@ -205,8 +205,9 @@ export default function ValuesProfile() {
         </h1>
         <div style={{ width: "40px", height: "2px", background: "#5B8A8A", margin: "0 auto 20px" }} />
         <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "15px", color: "#5A524A", maxWidth: "460px", margin: "0 auto", lineHeight: 1.7, fontWeight: 300 }}>
-          You already know what matters to you.<BR>This is a structured way to surface it.</BR>
-        </p>
+  You already know what matters to you.<br />
+  This is a structured way to surface it.
+</p>
       </div>
 
       <div style={{ maxWidth: "600px", margin: "0 auto", padding: "44px 20px 80px" , background: "#D4CFC4" }}>
