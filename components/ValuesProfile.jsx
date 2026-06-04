@@ -143,9 +143,9 @@ export default function ValuesProfile() {
   return (
     <div style={{ minHeight: "100vh", background: "#D4CFC4", padding: 0 }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Open+Sans:wght@300;400;500;600&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Jost', sans-serif; background: #D4CFC4; }
+        body { font-family: 'Open Sans', sans-serif; background: #D4CFC4; }
         .drag-card { cursor: grab; user-select: none; transition: transform 0.15s ease, box-shadow 0.15s ease; }
         .drag-card:active { cursor: grabbing; transform: scale(1.02); box-shadow: 0 14px 40px rgba(0,0,0,0.13); }
         .drag-card:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.09); }
@@ -197,24 +197,23 @@ export default function ValuesProfile() {
             <polygon points="40,120 80,160 40,160" fill="#6B6B6B"/>
           </svg>
         </div>
-        <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "11px", letterSpacing: "3px", color: "#5B8A8A", textTransform: "uppercase", fontWeight: 500, marginBottom: "16px" }}>
+        <p style={{ fontFamily: "'Open Sans', sans-serif", fontSize: "11px", letterSpacing: "3px", color: "#5B8A8A", textTransform: "uppercase", fontWeight: 500, marginBottom: "16px" }}>
           Kintsu
         </p>
-        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(30px, 6vw, 50px)", fontWeight: 400, color: "#2A2420", lineHeight: 1.2, marginBottom: "18px" }}>
+        <h1 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(30px, 6vw, 50px)", fontWeight: 400, color: "#2A2420", lineHeight: 1.2, marginBottom: "18px" }}>
           Your Values Profile
         </h1>
         <div style={{ width: "40px", height: "2px", background: "#5B8A8A", margin: "0 auto 20px" }} />
-        <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "15px", color: "#5A524A", maxWidth: "460px", margin: "0 auto", lineHeight: 1.7, fontWeight: 300 }}>
-  You already know what matters to you.<br />
-  This is a structured way to surface it.
-</p>
+        <p style={{ fontFamily: "'Open Sans', sans-serif", fontSize: "15px", color: "#5A524A", maxWidth: "460px", margin: "0 auto", lineHeight: 1.7, fontWeight: 300 }}>
+          You already know what matters to you. This is a structured way to surface it.
+        </p>
       </div>
 
       <div style={{ maxWidth: "600px", margin: "0 auto", padding: "44px 20px 80px" , background: "#D4CFC4" }}>
 
         {!submitted ? (
           <>
-            <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "12px", color: "#9A8F84", textAlign: "center", marginBottom: "32px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 500 }}>
+            <p style={{ fontFamily: "'Open Sans', sans-serif", fontSize: "12px", color: "#9A8F84", textAlign: "center", marginBottom: "32px", letterSpacing: "1px", textTransform: "uppercase", fontWeight: 500 }}>
               Drag to rank — most important at the top
             </p>
 
@@ -244,17 +243,17 @@ export default function ValuesProfile() {
                     background: index === 0 ? item.color : "#EDE8E0",
                     color: index === 0 ? "#fff" : "#9A8F84",
                     display: "flex", alignItems: "center", justifyContent: "center",
-                    fontFamily: "'Jost', sans-serif", fontSize: "13px", fontWeight: 600,
+                    fontFamily: "'Open Sans', sans-serif", fontSize: "13px", fontWeight: 600,
                   }}>
                     {index + 1}
                   </div>
                   <div style={{ flex: 1 }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "5px" }}>
-                      <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "17px", fontWeight: 600, color: "#2A2420" }}>
+                      <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "17px", fontWeight: 600, color: "#2A2420" }}>
                         {item.name}
                       </h3>
                     </div>
-                    <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "13px", color: "#7A726A", lineHeight: 1.6, fontWeight: 300 }}>
+                    <p style={{ fontFamily: "'Open Sans', sans-serif", fontSize: "13px", color: "#7A726A", lineHeight: 1.6, fontWeight: 300 }}>
                       {item.descriptor}
                     </p>
                   </div>
@@ -273,7 +272,7 @@ export default function ValuesProfile() {
                 width: "100%", padding: "17px",
                 background: "#5B8A8A", color: "#fff",
                 borderRadius: "8px",
-                fontFamily: "'Jost', sans-serif", fontSize: "14px",
+                fontFamily: "'Open Sans', sans-serif", fontSize: "14px",
                 fontWeight: 600, letterSpacing: "1.5px", textTransform: "uppercase",
               }}
             >
@@ -287,14 +286,14 @@ export default function ValuesProfile() {
               padding: "32px 28px", marginBottom: "32px",
               borderLeft: `4px solid ${items[0].color}`,
             }}>
-              <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "10px", letterSpacing: "3px", color: "#5B8A8A", textTransform: "uppercase", marginBottom: "10px", fontWeight: 500 }}>
+              <p style={{ fontFamily: "'Open Sans', sans-serif", fontSize: "10px", letterSpacing: "3px", color: "#5B8A8A", textTransform: "uppercase", marginBottom: "10px", fontWeight: 500 }}>
                 Your Profile
               </p>
-              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(20px, 4vw, 28px)", fontWeight: 400, color: "#F0EBE3", marginBottom: "16px", lineHeight: 1.3 }}>
+              <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(20px, 4vw, 28px)", fontWeight: 400, color: "#F0EBE3", marginBottom: "16px", lineHeight: 1.3 }}>
                 You lead with{" "}
                 <em style={{ color: items[0].color }}>{items[0].name}</em>
               </h2>
-              <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "14px", color: "#B0A898", lineHeight: 1.75, fontWeight: 300 }}>
+              <p style={{ fontFamily: "'Open Sans', sans-serif", fontSize: "14px", color: "#B0A898", lineHeight: 1.75, fontWeight: 300 }}>
                 {getPattern(items)}
               </p>
             </div>
@@ -317,15 +316,15 @@ export default function ValuesProfile() {
                       width: "24px", height: "24px", borderRadius: "50%", flexShrink: 0,
                       background: item.color, color: "#fff",
                       display: "flex", alignItems: "center", justifyContent: "center",
-                      fontFamily: "'Jost', sans-serif", fontSize: "11px", fontWeight: 600,
+                      fontFamily: "'Open Sans', sans-serif", fontSize: "11px", fontWeight: 600,
                     }}>
                       {index + 1}
                     </div>
-                    <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "17px", fontWeight: 600, color: "#2A2420" }}>
+                    <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "17px", fontWeight: 600, color: "#2A2420" }}>
                       {item.name}
                     </h3>
                     <span style={{
-                      fontSize: "9px", fontFamily: "'Jost', sans-serif", fontWeight: 600,
+                      fontSize: "9px", fontFamily: "'Open Sans', sans-serif", fontWeight: 600,
                       letterSpacing: "1.5px", textTransform: "uppercase",
                       color: item.category === "practical" ? "#5B8A8A" : "#7A6A9A",
                       background: item.category === "practical" ? "#EBF3F3" : "#F0EDF6",
@@ -334,7 +333,7 @@ export default function ValuesProfile() {
                       {item.category}
                     </span>
                   </div>
-                  <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "13px", color: "#5A524A", lineHeight: 1.7, fontWeight: 300 }}>
+                  <p style={{ fontFamily: "'Open Sans', sans-serif", fontSize: "13px", color: "#5A524A", lineHeight: 1.7, fontWeight: 300 }}>
                     {summaries[item.id][index + 1]}
                   </p>
                 </div>
@@ -349,17 +348,17 @@ export default function ValuesProfile() {
               marginBottom: "20px",
               border: "1px solid #E8E2DA",
             }}>
-              <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "10px", letterSpacing: "3px", color: "#9A8F84", textTransform: "uppercase", marginBottom: "12px", fontWeight: 500 }}>
+              <p style={{ fontFamily: "'Open Sans', sans-serif", fontSize: "10px", letterSpacing: "3px", color: "#9A8F84", textTransform: "uppercase", marginBottom: "12px", fontWeight: 500 }}>
                 Next Step
               </p>
-              <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "22px", fontWeight: 400, color: "#2A3B32", marginBottom: "12px", lineHeight: 1.4 }}>
+              <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "22px", fontWeight: 400, color: "#2A3B32", marginBottom: "12px", lineHeight: 1.4 }}>
                 Now apply your profile to actual opportunities
               </h3>
               <div style={{ width: "30px", height: "1px", background: "#5B8A8A", margin: "0 auto 16px" }} />
-              <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "13px", color: "#7A726A", lineHeight: 1.7, marginBottom: "8px", fontWeight: 300 }}>
+              <p style={{ fontFamily: "'Open Sans', sans-serif", fontSize: "13px", color: "#7A726A", lineHeight: 1.7, marginBottom: "8px", fontWeight: 300 }}>
                 The Kintsu Base Calculator scores any job listing against the four dimensions you just ranked — giving you a clear, structured signal on whether it's worth your time and energy.
               </p>
-              <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "13px", color: "#7A726A", lineHeight: 1.7, marginBottom: "24px", fontWeight: 300 }}>
+              <p style={{ fontFamily: "'Open Sans', sans-serif", fontSize: "13px", color: "#7A726A", lineHeight: 1.7, marginBottom: "24px", fontWeight: 300 }}>
                 When you're ready to adjust those weights yourself — dialing each dimension up or down based on what you've learned — that's what the Kintsu Pro Upgrade is for.
               </p>
               <a
@@ -370,7 +369,7 @@ export default function ValuesProfile() {
                   display: "inline-block", padding: "14px 36px",
                   background: "#2A3B32", color: "#EDE8E0",
                   borderRadius: "6px",
-                  fontFamily: "'Jost', sans-serif", fontSize: "12px",
+                  fontFamily: "'Open Sans', sans-serif", fontSize: "12px",
                   fontWeight: 600, textDecoration: "none",
                   letterSpacing: "1.5px", textTransform: "uppercase",
                   marginBottom: "14px",
@@ -384,7 +383,7 @@ export default function ValuesProfile() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  fontFamily: "'Jost', sans-serif", fontSize: "12px",
+                  fontFamily: "'Open Sans', sans-serif", fontSize: "12px",
                   color: "#7A726A", textDecoration: "underline",
                   letterSpacing: "0.5px", fontWeight: 400,
                 }}
@@ -398,7 +397,7 @@ export default function ValuesProfile() {
               style={{
                 width: "100%", padding: "12px", background: "transparent",
                 color: "#9A8F84", border: "1px solid #D8D0C8", borderRadius: "6px",
-                fontFamily: "'Jost', sans-serif", fontSize: "12px",
+                fontFamily: "'Open Sans', sans-serif", fontSize: "12px",
                 cursor: "pointer", letterSpacing: "1px", textTransform: "uppercase",
                 fontWeight: 500,
               }}
@@ -408,7 +407,7 @@ export default function ValuesProfile() {
           </>
         )}
 
-        <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "11px", color: "#8A8278", textAlign: "center", marginTop: "40px", lineHeight: 1.7, fontWeight: 300 }}>
+        <p style={{ fontFamily: "'Open Sans', sans-serif", fontSize: "11px", color: "#8A8278", textAlign: "center", marginTop: "40px", lineHeight: 1.7, fontWeight: 300 }}>
           This tool is not a substitute for professional career, psychological, or financial advice.<br />
           © 2026 Kintsu
         </p>
